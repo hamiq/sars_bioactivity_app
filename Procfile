@@ -1,1 +1,1 @@
-web: sh setup.sh && streamlit run bioactivty_app.py
+web: sh setup.sh && streamlit run bioactivity_app.py
