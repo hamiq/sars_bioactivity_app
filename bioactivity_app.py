@@ -24,7 +24,7 @@ def desc_calc():
 def filedownload(df):
   csv = df.to_csv(index=False)
   # strings <-> bytes conversion
-  b64 = base64.b64encode(csv.encode('utf-8')).decode('utf-8')
+  b64 = base64.b64encode(csv.encode("utf-8")).decode("utf-8")
   href = f'<a href="data:file/csv;base64,{b64}" download="prediction.csv">Download Predictions</a>'
   return href
 
