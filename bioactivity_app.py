@@ -22,7 +22,7 @@ def desc_calc():
 
 # file download
 def filedownload(df):
-  csv = df.to_csv(index=False, mode='b')
+  csv = df.to_csv(index=False, encoding='utf-8', errors='ignore')
   # strings <-> bytes conversion
   encoded = base64.b64encode(csv)
   decoded = base64.b64decode(encoded)
