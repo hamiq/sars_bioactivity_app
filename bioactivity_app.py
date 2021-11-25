@@ -1,11 +1,13 @@
 # streamlit for web framework
 # pandas for data handling and manipulation
+# sklearn and RandomForestRegressor for model building
 # subprocess for descriptor calculation using Java
 # os for file handling
 # pickle for loading pickle file
 
 import streamlit as st
 import pandas as pd
+from sklearn.ensemble import RandomForestRegressor
 import subprocess
 import os
 import pickle
