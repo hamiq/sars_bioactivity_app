@@ -27,7 +27,7 @@ def filedownload(df):
 # model building
 def build_model(input_data):
   # apply loaded model to input data
-  load_model = pickle.load(open('sars_cov_proteinase_model.pkl'))
+  load_model = pickle.load(open('sars_cov_proteinase_model.pkl', 'rb'))
   prediction = load_model.predict(input_data)
   # create table for prediction output using 1D arrays
   st.header('**Prediction Output**')
