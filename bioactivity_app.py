@@ -2,6 +2,7 @@
 # pandas for data handling and manipulation
 # sklearn and RandomForestRegressor for model building
 # subprocess for descriptor calculation using Java
+# base64 for encoding and decoding files
 # os for file handling
 # pickle for loading pickle file
 
@@ -10,6 +11,7 @@ import pandas as pd
 import sklearn
 from sklearn.ensemble import RandomForestRegressor
 import subprocess
+import base64
 import os
 import pickle
 
@@ -24,7 +26,9 @@ def desc_calc():
 # file download
 def filedownload(df):
   csv = df.to_csv(index=False)
-  href = f'<a href="data:file/csv;base64,{csv}" download="prediction.csv">Download Predictions</a>'
+  # strings <-> bytes conversions
+  b64 = base64.b64encode(csv.encode()).decode()
+  href = f'<a href="data:application/sars-drug-bioactivity;base64,{b64}" download="prediction.csv">Download Predictions</a>'
   return href
 
 # model building
