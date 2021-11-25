@@ -35,7 +35,7 @@ def build_model(input_data):
   # create table for prediction output using 1D arrays
   st.header('**Prediction Output**')
   prediction_output = pd.Series(prediction, name = 'pIC50')
-  molecule_name = pd.Series(load_data[1], name = 'Molecule Name')
+  molecule_name = pd.Series(load_data.iloc[:, 1], name = 'Molecule Name')
   df = pd.concat([molecule_name, prediction_output], axis = 1)
   st.write(df)
   # save prediction output table into a file for download using previously created function
