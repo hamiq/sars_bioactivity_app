@@ -47,19 +47,17 @@ def build_model(input_data):
 
 # page title
 st.markdown("""
-# SARS-CoV Bioactivity Prediction App
+# SARS-CoV Bioactivity Prediction App""")
 
+# description
+st.markdown("""
 This app allows you to predict the bioactivity of drug candidates towards inhibiting the SARS coronavirus 3C-like proteinase.
----
 """)
 
 # sidebar
 with st.sidebar.header('1. Upload your CSV data'):
   uploaded_file = st.sidebar.file_uploader('Upload your file here', type=["csv"])
-  st.sidebar.markdown("""
-  [Example input file](https://github.com/hamiq/sars_inhibitor_prediction/blob/main/datafiles/
-example_sars_drug_bioactivity.csv)
-""")
+  st.sidebar.markdown("""[Example input file](https://github.com/hamiq/sars_inhibitor_prediction/blob/main/datafiles/example_sars_drug_bioactivity.csv)""")
 
 # when the Predict button is clicked
 if st.sidebar.button('Predict'):
