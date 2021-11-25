@@ -50,11 +50,6 @@ st.markdown("""
 # SARS-CoV Bioactivity Prediction App
 
 This app allows you to predict the bioactivity of drug candidates towards inhibiting the SARS coronavirus 3C-like proteinase.
-
-**Credits**
-- App built in `Python` and `Streamlit`.
-- Methodology provided by [Chanin Nantasenamat](https://medium.com/@chanin.nantasenamat) (aka [Data Professor](http://youtube.com/dataprofessor)).
-- Descriptor calculated using [PaDEL-Descriptor](http://www.yapcwsoft.com/dd/padeldescriptor/).
 ---
 """)
 
@@ -64,7 +59,7 @@ with st.sidebar.header('1. Upload your CSV data'):
   st.sidebar.markdown("""
   [Example input file](https://github.com/hamiq/sars_inhibitor_prediction/blob/main/datafiles/
 example_sars_drug_bioactivity.csv)
-  """)
+""")
 
 # when the Predict button is clicked
 if st.sidebar.button('Predict'):
@@ -101,3 +96,12 @@ if st.sidebar.button('Predict'):
 #when the Predict button is not clicked
 else:
   st.info('Upload input data in the sidebar to start!')
+  
+ # footer
+st.markdown("""
+---
+**Credits**
+- App built in `Python` and `Streamlit`.
+- Methodology provided by [Chanin Nantasenamat](https://medium.com/@chanin.nantasenamat) (aka [Data Professor](http://youtube.com/dataprofessor)).
+- Descriptor calculated using [PaDEL-Descriptor](http://www.yapcwsoft.com/dd/padeldescriptor/).
+""")
