@@ -45,7 +45,8 @@ def build_model(input_data):
   # save prediction output table into a file for download using previously created function
   st.markdown(filedownload(df), unsafe_allow_html = True)
 
-# page title
+# header
+st.image("https://www.who.int/images/default-source/wpro/emergencies-hub/covid-19/coronavirus-2.jpg?sfvrsn=f3ceff40_7", use_column_width=True)
 st.markdown("""
 # SARS-CoV Bioactivity Prediction App""")
 
