@@ -2,14 +2,12 @@
 # pandas for data handling and manipulation
 # subprocess for descriptor calculation using Java
 # os for file handling
-# base64 for encoding and decoding files
 # pickle for loading pickle file
 
 import streamlit as st
 import pandas as pd
 import subprocess
 import os
-import base64
 import pickle
 
 # PaDEL descriptor calculator
@@ -22,11 +20,8 @@ def desc_calc():
 
 # file download
 def filedownload(df):
-  csv = df.to_csv(index=False, encoding='utf-8', errors='ignore')
-  # strings <-> bytes conversion
-  encoded = base64.b64encode(csv)
-  decoded = base64.b64decode(encoded)
-  href = f'<a href="data:file/csv;base64,{decoded}" download="prediction.csv">Download Predictions</a>'
+  csv = df.to_csv(index=False)
+  href = f'<a href="data:file/csv;base64,{csv}" download="prediction.csv">Download Predictions</a>'
   return href
 
 # model building
