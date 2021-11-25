@@ -46,7 +46,7 @@ def build_model(input_data):
   st.markdown(filedownload(df), unsafe_allow_html = True)
 
 # header
-st.image("https://www.who.int/images/default-source/wpro/emergencies-hub/covid-19/coronavirus-2.jpg?sfvrsn=f3ceff40_7", use_column_width=True)
+st.image("https://www.bdbiosciences.com/content/dam/bdb/discover-learn/research-areas/covid-19/Covid-19-Banner.png", use_column_width=True)
 st.markdown("""
 # SARS-CoV Bioactivity Prediction App""")
 
